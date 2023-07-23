@@ -10,6 +10,11 @@ const options = {
   orientation: 'portrait',
   border: '10mm',
   phantomPath: phantomjs.path,
+  childProcessOptions: {
+    env: {
+      OPENSSL_CONF: '/dev/null',
+    },
+  },
 };
 
 const billPdf = async (req, res) => {
