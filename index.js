@@ -33,7 +33,8 @@ const api = new ParseServer(parseConfig);
 app.use(parse.mountPath, api);
 
 app.get('/', (req, res) => res.status(200).send(`Greetings, I'am work`));
-app.post('/bill-pdf', require('./src/api/bill-pdf'));
+app.post('/consumables-bill-pdf', require('./src/api/consumables-bill-pdf'));
+app.post('/activities-bill-pdf', require('./src/api/activities-bill-pdf'));
 app.get('/download-bill/:path', require('./src/api/download-bill'));
 app.post('/sendmail-bill', require('./src/api/sendmail-bill'));
 

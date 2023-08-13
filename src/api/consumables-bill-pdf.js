@@ -3,7 +3,7 @@ const fs = require('fs');
 const phantomjs = require('phantomjs-prebuilt');
 const { billFilePath } = require('../config');
 
-const html = fs.readFileSync('src/template/bill.html', 'utf8');
+const html = fs.readFileSync('src/template/consumables-bill.html', 'utf8');
 
 const options = {
   format: 'A4',
