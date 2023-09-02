@@ -32,3 +32,5 @@ upload/bills
 # Emacs
 *~
 .eslintcache
+
+dbdata
