@@ -41,7 +41,7 @@ app.post('/sendmail-bill', require('./src/api/sendmail-bill'));
 app.post('/nurse-note-pdf', require('./src/api/nurse-note-pdf'));
 app.get('/dowmload-nurse-note/:path', require('./src/api/dowmload-nurse-note'));
 
-var options = { allowInsecureHTTP: true };
+const options = { allowInsecureHTTP: true };
 
 const dashboard = new ParseDashboard(
   {
