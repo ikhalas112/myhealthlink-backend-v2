@@ -32,6 +32,7 @@ app.use(function (req, res, next) {
 app.use('/public', express.static(path.join(__dirname, '/public')));
 
 const api = new ParseServer(parseConfig);
+
 app.use(parse.mountPath, api);
 
 app.get('/', (req, res) => res.status(200).send(`Greetings, I'am work`));
