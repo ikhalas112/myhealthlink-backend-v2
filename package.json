@@ -11,7 +11,13 @@
   "scripts": {
     "start": "env-cmd -f envs/.env.production node index.js",
     "dev": "env-cmd -f envs/.env.development nodemon index.js",
-    "docker:db": "docker-compose build && docker-compose up -d"
+    "docker:db": "docker-compose build && docker-compose up -d",
+    "start:mhg": "env-cmd -f envs/.env.mhg node index.js",
+    "dev:mhg": "env-cmd -f envs/.env.mhg nodemon index.js",
+    "docker:db-mhg": "docker-compose --env-file envs/.env.mhg build && docker-compose --env-file envs/.env.mhg up -d",
+    "start:amataya": "env-cmd -f envs/.env.amataya node index.js",
+    "dev:amataya": "env-cmd -f envs/.env.amataya nodemon index.js",
+    "docker:db-amataya": "docker-compose --env-file envs/.env.amataya build && docker-compose --env-file envs/.env.amataya up -d"
   },
   "dependencies": {
     "env-cmd": "^10.1.0",

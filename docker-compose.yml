@@ -2,12 +2,12 @@ version: '3.8'
 services:
   mongo-db:
     image: mongo:4.4
-    container_name: mhl-mongo-db
+    container_name: ${DOCKER_CONTAINER_NAME}
     restart: always
     ports:
-      - '27017:27017'
+      - '${DOCKER_PORT}:27017'
     volumes:
-      - './dbdata:/data/db'
+      - '${DOCKER_VOLUMES_DIR}:/data/db'
 
 
 
