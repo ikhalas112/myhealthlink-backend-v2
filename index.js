@@ -14,6 +14,8 @@ const parseConfig = {
   serverURL: parse.serverURL,
 };
 
+console.log({ parseConfig });
+
 parseInitialize();
 const app = express();
 
