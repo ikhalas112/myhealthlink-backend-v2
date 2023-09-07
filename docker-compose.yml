@@ -1,13 +1,21 @@
 version: '3.8'
 services:
-  mongo-db:
+  mhl-amataya-mongo-db:
     image: mongo:4.4
-    container_name: ${DOCKER_CONTAINER_NAME}
+    container_name: amataya-mongo-db
     restart: always
     ports:
-      - '${DOCKER_PORT}:27017'
+      - '18018:27017'
     volumes:
-      - '${DOCKER_VOLUMES_DIR}:/data/db'
+      - './dbdata/amataya:/data/db'
+  mhl-dev-mongo-db:
+    image: mongo:4.4
+    container_name: dev-mongo-db
+    restart: always
+    ports:
+      - '18019:27017'
+    volumes:
+      - './dbdata/dev:/data/db'
 
 
 
