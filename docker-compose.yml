@@ -16,7 +16,27 @@ services:
       - '18019:27017'
     volumes:
       - './dbdata/dev:/data/db'
-
-
-
-
+  mhl-ckr-mongo-db:
+    image: mongo:4.4
+    container_name: ckr-mongo-db
+    restart: always
+    ports:
+      - '18020:27017'
+    volumes:
+      - './dbdata/ckr:/data/db'
+  mhl-cwt-mongo-db:
+    image: mongo:4.4
+    container_name: cwt-mongo-db
+    restart: always
+    ports:
+      - '18021:27017'
+    volumes:
+      - './dbdata/cwt:/data/db'
+  mhl-agy-mongo-db:
+    image: mongo:4.4
+    container_name: agy-mongo-db
+    restart: always
+    ports:
+      - '18022:27017'
+    volumes:
+      - './dbdata/agy:/data/db'
